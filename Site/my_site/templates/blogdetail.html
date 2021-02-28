@@ -1,0 +1,221 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="KE4b83mp_wwoAfsQgHZy3ogHPcuozRqcXsWb5LcwAN0" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155374888-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-155374888-1');
+    </script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ article.Title }}</title>
+    <meta name="keywords" content="{{ article.Title }}" />
+    <meta name="description" content="{{ article.body|striptags }}" />
+    <link rel="shortcut icon" type="image/png" href='static/css/covers/favicon.png' />
+    <meta property="og:title" content="{{ article.Title }}" />
+    <meta property="og:description" content="{{ article.body|striptags }}" />
+    <meta property="og:url" content="openblog/{{ article.slug }}" />
+    <meta property="og:image" content="{{ article.image.url }}" />
+    <meta property="og:site_name" content="Dailyhoroscope.tech" />
+    <link rel="shortcut icon" type="image/png" href="{% static 'css/covers/favicon.png' %}" />
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+</head>
+
+<body>
+
+    <div>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="/"><img src="{% static 'assets/img/eye.png' %}" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a href="/" class="nav-link">Horoscope</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="/openblog" class="nav-link">Blog</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="/Divination-on-chamomile/" class="nav-link">Divination</a>
+                        </li>
+                    </ul>
+                    <div class="form-inline my-2 my-lg-0">
+
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- horizontalAd -->
+                        <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px"
+                            data-ad-client="ca-pub-8283141263662455" data-ad-slot="9651234283"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="header3 ">{{ article.Title }}</div>
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9 col-md-12 col-lg-9">
+                    <div class="container horoscope_box_big">
+
+                        <div class="blog_img1">
+                            <img src="{{ article.image.url }}" alt="{{ article.Title }}">
+                        </div>
+                        <h1 class="blog_title1">{{ article.Title }}    </h1>
+
+              
+                        <div class="blog_descr1">
+                            <br>
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <ins class="adsbygoogle" style="display:block; text-align:center;"
+                                data-ad-layout="in-article" data-ad-format="fluid"
+                                data-ad-client="ca-pub-8283141263662455" data-ad-slot="3835635551"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+
+                            <div class="articleData">
+                                <p>
+                                    {{  article.body|safe  }}
+                                </p>
+
+
+
+
+                                {% include "html2/suggest.html" %}
+                                
+                                <b>Common Tags: </b> <br />
+                                    {% for mt in common_tags %}
+                                    <a href="/tag/{{ mt }}" class="btn btn-primary btn-sm">{{mt}}</a>
+                                    {% endfor %}
+                                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+                                    </script>
+                                    <!-- Link Ads -->
+                                    <ins class="adsbygoogle" style="display:block"
+                                        data-ad-client="ca-pub-8283141263662455" data-ad-slot="2576319038"
+                                        data-ad-format="link" data-full-width-responsive="true"></ins>
+                                    <script>
+                                        (adsbygoogle = window.adsbygoogle || []).push({});
+                                    </script>
+
+                            </div>
+
+                        </div>
+
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article"
+                            data-ad-format="fluid" data-ad-client="ca-pub-8283141263662455"
+                            data-ad-slot="3835635551"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+
+                        <div class="container">
+                            <div class="choose_zodiac">
+                                <h3 class="text-center">Blog List</h3>
+                            </div>
+                        </div>
+
+                        <div class="">
+                            <div class="story1 owl-carousel owl-theme">
+                                {% for x in articlee %}
+                                <a href="{{ x.slug }}" class="story-item item">
+                                    <img src="{{ x.image.url }}" class="owl-articles-image" alt="{{ x.Title }}">
+                                    <span class="owl-articles-text">{{ x.Title }}</span>
+                                </a>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="col-sm-3 col-md-12 col-lg-3">
+                    <div class="ScrollBar">
+                        <div class="AdsStlye">Google Ads</div>
+                        <div class="mb-10"></div>
+                        <div>
+
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+                            </script>
+
+                            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8283141263662455"
+                                data-ad-slot="9123786529" data-ad-format="auto"
+                                data-full-width-responsive="true"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+        <script src="{% static 'assets/js/jquery.js' %}"></script>
+        <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+
+
+        <script>
+            $(document).ready(function () {
+                $('.story1').owlCarousel({
+                    center: false,
+                    items: 3,
+                    loop: true,
+                    margin: 10,
+                    autoWidth: true,
+                    dots: false,
+                });
+
+                $('.articleData p:nth-child(5n)').each(function () {
+                    $(this).append('');
+                });
+
+            });
+        </script>
+
+</body>
+
+<footer class="footer">
+    <div class="container">
+        <span class="text-muted">© Copyright 2020 - DailyHoroscopee.coom</span>
+    </div>
+</footer>
+
+</html>

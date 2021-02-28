@@ -1,0 +1,19 @@
+{% load static %}
+<div class="header1">
+	<div class="header1_box">
+		<a href="/" class="logo left "><img src="{% static 'css/covers/eye.png' %}" alt="logo"> </a>
+		<ul class="content_menu hide_mob" style="position:relative;">
+			<li><a href="/" class="{%if 'horoscope' in request.path %}active{% endif %}	">Horoscope</a></li>
+			<li><a href="/openblog" class = "{% if 'blog' in request.path %}active{% endif %}">Blog </a></li>
+		</ul>
+		<div class="right">
+			<div class="trans_menu" id="menu_button">
+
+			</div>
+		</div>
+	</div>
+</div>
+{%if cat == '/' %}active{% endif %}
+{%if cat == 'openblog/' %}active{% endif %}
+
+<!-- ////////////////////////////////////////////sdsdsad/  -->

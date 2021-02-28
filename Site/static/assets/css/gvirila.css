@@ -1,0 +1,30 @@
+.gvirilaclass {
+  background: linear-gradient(0, #5eba7d, #0077cc, #e1b604);
+  display: grid;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.gvirilaclass #text {
+  position: relative;
+}
+.gvirilaclass img,
+.gvirilaclass #text {
+  grid-row: 1;
+  grid-column: 1;
+  margin: auto;
+}
+.gvirilaclass img:not(.center) {
+  padding-right: 375px;
+  clip-path: polygon(0% 100%, 0% 0%, 40% 0%, 40% 100%);
+}
+.gvirilaclass img:hover {
+  filter: brightness(105%);
+}
+@media screen and (max-width:850px) {
+  .gvirilaclass img:not(.center) {
+    padding-right: 210px;
+    width: 100%;
+  }
+}

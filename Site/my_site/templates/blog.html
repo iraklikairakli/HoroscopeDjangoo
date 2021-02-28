@@ -1,0 +1,203 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155374888-1"></script>
+    <meta name="google-site-verification" content="KE4b83mp_wwoAfsQgHZy3ogHPcuozRqcXsWb5LcwAN0" />
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-155374888-1');
+    </script>
+    <!-- Bootstrap CSS -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/png" href="{% static 'css/covers/favicon.png' %}"/>
+    <title>Blogs - Daily Horoscope - Dailyhoroscope.tech Daily horoscope for Aquarius , Taurus , Gemini , Sagittarius , Capricorn , Scorptio , Aries , Leo , Virgo Pisces , Libra</title>
+    <meta name="keywords" content="horoscope, free horoscope, daily horoscope, horoscope for today, love horoscope, monthly horoscope" />
+    <meta name="description"content="Daily horoscope Blog - Here you can see Daily horoscope for Aquarius , Taurus , Gemini , Sagittarius , Capricorn , Scorptio , Aries , Leo , Virgo Pisces , Libra  "/>
+    <meta property="og:title" content="Daily horoscope - Free Daily horoscope for Aquarius , Taurus , Gemini , Sagittarius , Capricorn , Scorptio , Aries , Leo , Virgo Pisces , Libra" />
+    <meta property="og:description" content="Daily horoscope - Dailyhoroscope.tech." />
+    <meta property="og:url" content="index.html" />
+    <meta property="og:image" content="covers/choujou.png" />
+    <meta property="og:site_name" content="Dailyhoroscope.tech" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+
+</head>
+
+<body>
+
+    <div>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="/"><img src="{% static 'assets/img/eye.png' %}" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a href="/" class="nav-link">Horoscope</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="/openblog" class="nav-link">Blog</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="/Divination-on-chamomile/" class="nav-link">Divination</a>
+                        </li>
+                    </ul>
+                    <div class="form-inline my-2 my-lg-0">
+
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- horizontalAd -->
+                        <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px"
+                            data-ad-client="ca-pub-8283141263662455" data-ad-slot="9651234283"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="header3 ">Blogs</div>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-sm-9 col-md-12 col-lg-9">
+                    <div class="container">
+
+
+                        <div class="center">
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <!-- horizontalAd -->
+                            <ins class="adsbygoogle" style="display:inline-block;height:90px;width: 99%;margin: 0 auto"
+                                data-ad-client="ca-pub-8283141263662455" data-ad-slot="9651234283"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                        </div>
+
+                        <div class="row horoscope_box_big">
+                            {% for x in articles %}
+
+                                {% if forloop.counter|divisibleby:5 %}
+                        
+                                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                    <!-- horizontalAd -->
+                                    <ins class="adsbygoogle"
+                                        style="display:inline-block;width:100%;height:90px;margin-bottom: 15px;"
+                                        data-ad-client="ca-pub-8283141263662455"
+                                        data-ad-slot="9651234283"></ins>
+                                    <script>
+                                        (adsbygoogle = window.adsbygoogle || []).push({});
+                                    </script>
+               
+                               
+                                {% endif %}
+
+
+                            <div class="col-sm-6 pr-5 pl-5">
+                                <div class="blog_box">
+                                    <a href="/openblog/{{ x.slug }}" class="blog_img" alt="{{ x.Title }}"><img style="width: 100%;height:255px"
+                                            src="{{ x.image.url }}"></a>
+                                    <a href="/openblog/{{ x.slug }}" class="blog_title">{{ x.Title }}</a>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                        {% if posts.paginator.num_pages > 1 %}
+                    
+                        {% if posts.has_previous %}
+                    
+                            <li class="page-item"><a class="page-link" href="?page={{ posts.previous_page_number }}">previous</a></li>
+                    
+                        {% endif %}
+                        <li class="page-item"><a class="page-link" href="#">    <span>Page {{ posts.number }} of {{ posts.paginator.num_pages }}</span></a></li>
+                    
+                    
+                        {% if posts.has_next %}
+                    
+                    
+                            <li class="page-item"><a class="page-link" href="?page={{ posts.next_page_number }}">Next</a></li>
+                    
+                    
+                        {% endif %}
+                    
+                    {% endif %}
+                    
+                    
+
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <ins class="adsbygoogle"
+                            style="display:block; text-align:center;"
+                            data-ad-layout="in-article"
+                            data-ad-format="fluid"
+                            data-ad-client="ca-pub-8283141263662455"
+                            data-ad-slot="3835635551"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                        
+                    </div>
+                </div>
+
+                <div class="col-sm-3 col-md-12 col-lg-3 rightNavRelative">
+                    <div class="ScrollBar">
+                        <div class="AdsStlye">Google Ads</div>
+                        <div class="mb-10"></div>
+                        <div>
+                       
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            
+                            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8283141263662455"
+                                data-ad-slot="9123786529" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+    <script src="{% static 'assets/js/jquery.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+
+<footer class="footer">
+    <div class="container">
+        <span class="text-muted">© Copyright 2020 - DailyHoroscopee.com</span>
+    </div>
+</footer>
+
+
+</html>

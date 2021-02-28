@@ -1,0 +1,251 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="KE4b83mp_wwoAfsQgHZy3ogHPcuozRqcXsWb5LcwAN0" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155374888-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-155374888-1');
+    </script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> {{ sign.Title }} - Daily , Love , Finance Horoscope </title>
+    <meta name="keywords" content="{{ sign.Title }} - Daily , Love , Finance Horoscope , h o r o s c o p e,horoscopes,zodiac signs,zodiac sign,in zodiac signs,sign of zodiac,zodiacs" />
+
+    <meta property="og:title" content="Daily Horoscope for {{ sign.Title }}" />
+    <meta property="og:description" content="                                
+    {%if cat == 'Daily' %}
+    {{ sign.Daily }}
+
+    {% elif cat == 'Love' %}
+    {{ sign.Love }}
+
+    {% elif cat == 'Finance' %}
+    {{ sign.Finance }}
+
+    {% endif %}
+    " />
+    <meta property="og:url" content="/horoscope/{{ sign.Title }}/{{ cat }}" />
+
+
+    <meta property="og:image" content="
+    /static/css/covers/{{ sign.Title|lower }}.jpg 
+    "
+    />
+
+    <meta property="og:site_name" content="Dailyhoroscopee.com" />
+    <link rel="shortcut icon" type="image/png" href="{% static 'css/covers/favicon.png' %}" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+</head>
+
+<body>
+
+    <div>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="/"><img src="{% static 'assets/img/eye.png' %}" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a href="/" class="nav-link">Horoscope</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="/openblog" class="nav-link">Blog</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="/Divination-on-chamomile/" class="nav-link">Divination</a>
+                        </li>
+                    </ul>
+                    <div class="form-inline my-2 my-lg-0">
+
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- horizontalAd -->
+                        <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px"
+                            data-ad-client="ca-pub-8283141263662455" data-ad-slot="9651234283"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+        {%if cat == 'Daily'%}
+        <div class="header3_dgis">
+            {% block content %}{{ cat }} Horoscope {% endblock content %}
+
+        </div>
+        {%elif cat == 'Love' %}
+        <div class="header3_siyvaruli ">
+
+            {{ cat }} Horoscope
+        </div>
+        {% elif cat == 'Finance' %}
+        <div class='header3_finansebi'>
+
+            {{ cat }} Horoscope
+        </div>
+        {% endif %}
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9 col-md-12 col-lg-9">
+                    <div class="horoscope_box_big">
+                        <div class="horoscope_box_big_text">
+                            <div class="fullpage_top">
+                                {{ sign.Image|safe }}
+                                <div class="fullpage_top_right">
+                                    <h1>{{ sign.Title }}</h1>
+                                    <span class="period_title period_title_active">{{ cat }}</span>
+                                    <div class="period_date">
+                                        {{ sign.date }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="center">
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+                                </script>
+                                <!-- horizontalAd -->
+                                <ins class="adsbygoogle"
+                                    style="display:inline-block;height:90px;width: 99%;margin: 0 auto"
+                                    data-ad-client="ca-pub-8283141263662455" data-ad-slot="9651234283"></ins>
+                                <script>
+                                    (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                            </div>
+
+                            <div class="blog_descr1">
+                                {%if cat == 'Daily' %}
+                                {{ sign.Daily }}
+
+                                {% elif cat == 'Love' %}
+                                {{ sign.Love }}
+
+                                {% elif cat == 'Finance' %}
+                                {{ sign.Finance }}
+
+                                {% endif %}
+                            </div>
+
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <ins class="adsbygoogle" style="display:block; text-align:center;"
+                                data-ad-layout="in-article" data-ad-format="fluid"
+                                data-ad-client="ca-pub-8283141263662455" data-ad-slot="3835635551"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+
+                            <div class="menu_tabs">
+                                <div class="menu_tabs_title">Other Horoscope</div>
+
+                                <a href="/horoscope/{{ slug }}/Daily"
+                                    class="noDecoration btn-skin {%if cat == 'Daily' %}period_title_active{% endif %} ">Daily</a>
+                                <a href="/horoscope/{{ slug }}/Love"
+                                    class="noDecoration btn-skin {%if cat == 'Love' %}period_title_active{% endif %}">Love</a>
+                                <a href="/horoscope/{{ slug }}/Finance"
+                                    class="noDecoration btn-skin {%if cat == 'Finance' %}period_title_active{% endif %}">Finance</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="container">
+                        <div class="choose_zodiac">
+                            <h3 class="text-center">Blog List</h3>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="story1 owl-carousel owl-theme">
+                            {% for s in articled %}
+                            <a href="/openblog/{{ s.slug }}" class="story-item item">
+                                <img src="{{ s.image.url }}"
+                                    class="owl-articles-image">
+                                <span class="owl-articles-text">{{s.Title }}</span>
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="col-sm-3 col-md-12 col-lg-3 rightNavRelative">
+                    <div class="ScrollBar">
+                        <div class="AdsStlye">Google Ads</div>
+                        <div class="mb-10"></div>
+                        <div>
+            
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            
+                            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8283141263662455"
+                                data-ad-slot="9123786529" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                           
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="{% static 'assets/js/jquery.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('.story1').owlCarousel({
+                center: false,
+                items: 3,
+                loop: true,
+                margin: 10,
+                autoWidth: true,
+                dots: false,
+            });
+        });
+    </script>
+
+</body>
+
+<footer class="footer">
+    <div class="container">
+        <span class="text-muted">© Copyright 2020 - DailyHoroscopee.com</span>
+    </div>
+</footer>
+
+</html>

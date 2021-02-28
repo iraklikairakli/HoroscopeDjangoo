@@ -1,0 +1,51 @@
+{% load static %}
+
+{%if request.path == '/aries'%}
+{% block titleAries %}
+
+	Aries Daily horoscope from Dailyhoroscope.tech. Discover what's in store for your astrology sign for the day, your week in romance and more. horoscopes, astrology, zodiac signs, daily horoscope  - Dailyhoroscope.tech"
+
+{% endblock titleAries %}
+{%elif request.path == '/aries/love'%}
+{% block titleLoveAries %}
+
+	Aries Love horoscope from Dailyhoroscope.tech. Discover what's in store for your astrology sign for the day, your week in romance and more. horoscopes, astrology, zodiac signs, daily horoscope  - Dailyhoroscope.tech"
+
+{% endblock titleLoveAries %}
+
+
+{%elif request.path == '/taurus'%}
+{% block taurusdaily  %}
+
+	Taurus Daily horoscope from Dailyhoroscope.tech. Discover what's in store for your astrology sign for the day, your week in romance and more. horoscopes, astrology, zodiac signs, daily horoscope  - Dailyhoroscope.tech"
+
+{% endblock taurusdaily %}
+
+{%elif request.path == '/taurus/love'%}
+{% block tauruslove %}
+
+	Taurus love horoscope from Dailyhoroscope.tech. Discover what's in store for your astrology sign for the day, your week in romance and more. horoscopes, astrology, zodiac signs, daily horoscope  - Dailyhoroscope.tech"
+
+{% endblock tauruslove %}
+
+{%elif request.path == '/taurus/finance'%}
+{% block taurusfinance %}
+
+	Taurus finance horoscope from Dailyhoroscope.tech. Discover what's in store for your astrology sign for the day, your week in romance and more. horoscopes, astrology, zodiac signs, daily horoscope  - Dailyhoroscope.tech"
+
+{% endblock taurusfinance %}
+
+
+{%elif request.path == '/gemini/finance'%}
+
+
+	Gemini finance horoscope from Dailyhoroscope.tech. Discover what's in store for your astrology sign for the day, your week in romance and more. horoscopes, astrology, zodiac signs, daily horoscope  - Dailyhoroscope.tech"
+
+
+
+{%elif request.path == '/gemini/love'%}
+	Gemini love horoscope from Dailyhoroscope.tech. Discover what's in store for your astrology sign for the day, your week in romance and more. horoscopes, astrology, zodiac signs, daily horoscope  - Dailyhoroscope.tech"
+
+{%elif request.path == '/gemini'%}
+	Gemini daily horoscope from Dailyhoroscope.tech. Discover what's in store for your astrology sign for the day, your week in romance and more. horoscopes, astrology, zodiac signs, daily horoscope  - Dailyhoroscope.tech"
+{% endif %}
